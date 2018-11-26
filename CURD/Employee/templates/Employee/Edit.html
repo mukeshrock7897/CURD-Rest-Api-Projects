@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edition Page of Employee</title>
+</head>
+<body>
+
+<form method="post" action="/Employee/update/{{ employee.id }}" class="post-form">
+    {% csrf_token %}
+    <table border="2px solid">
+        <tr>
+            <th>Employee ID</th>
+            <td>
+                <input type="text" id="id_eid" name="eid" value="{{ employee.eid }}" required/>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Employee Name</th>
+            <td>
+                <input type="text" id="id_ename" name="ename" value="{{ employee.ename }}" required/>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Employee Email</th>
+            <td>
+                <input type="email" id="id_eemail" name="eemail" value="{{ employee.eemail }}" required/>
+            </td>
+        </tr>
+
+
+        <tr>
+            <th>Employee Contact</th>
+            <td>
+                <input type="text" id="id_econtact" name="econtact" value="{{ employee.econtact }}" required/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="submit">Update</button>
+            </td>
+
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

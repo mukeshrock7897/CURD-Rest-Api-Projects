@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Reacords</title>
+</head>
+<body bgcolor="#008b8b">
+
+<div>
+     {% for employee in employee %}
+         <br>
+         <br>
+         <br>
+
+<table border="1px solid" style="margin-left: 35%;">
+
+    <tr>
+
+        <img src="{{ employee.image.url }}" style="width: 200px;height: 200px;border-radius:50%;margin-left: 43%;">
+    </tr>
+
+    <tr>
+        <th>Name</th>
+        <td>{{ employee.name }}</td>
+    </tr>
+
+
+    <tr>
+        <th>Profession</th>
+        <td>{{ employee.profession }}</td>
+    </tr>
+
+
+        <tr>
+        <th>Company</th>
+        <td>{{ employee.company }}</td>
+    </tr>
+
+
+        <tr>
+        <th>Local Address</th>
+        <td>{{ employee.local_address }}</td>
+    </tr>
+
+
+    <tr>
+        <th>Permanent Address</th>
+        <td>{{ employee.perma_address }}</td>
+    </tr>
+
+
+        <tr>
+        <th>Contact</th>
+        <td>{{ employee.contact }}</td>
+    </tr>
+
+
+        <tr>
+        <th>Email</th>
+        <td>{{ employee.email }}</td>
+    </tr>
+
+        <tr>
+        <th>Father'Name</th>
+        <td>{{ employee.father }}</td>
+    </tr>
+
+        <tr>
+        <th>Mother's Name</th>
+        <td>{{ employee.mother }}</td>
+    </tr>
+
+
+        <tr>
+        <th>Fathers'Occupation</th>
+        <td>{{ employee.occupation }}</td>
+    </tr>
+
+<tr>
+    <td colspan="2">
+    <button type="submit" style="width: 100%;">Update</button>
+    </td>
+</tr>
+</table>
+{% endfor %}
+</div>
+
+</body>
+</html>

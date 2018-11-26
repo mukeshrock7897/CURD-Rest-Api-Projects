@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Employee Details...</title>
+</head>
+<body>
+
+<h1>All Employee Details with Descriptions..........</h1>
+
+<table border="2px solid">
+<tr>
+    <th>Employee ID</th>
+    <th>Employee Name</th>
+    <th>Employee Email</th>
+    <th>Employee Contact</th>
+    <th>Action</th>
+</tr>
+    {% for e in employee %}
+    <tr>
+        <td>{{ e.eid }}</td>
+        <td>{{ e.ename }}</td>
+        <td>{{ e.eemail }}</td>
+        <td>{{ e.econtact }}</td>
+        <td>
+            <a href="/Employee/edit/{{ e.id }}">Edit</a>
+            <a href="/Employee/delete/{{ e.id }}">Delete</a>
+        </td>
+    {% endfor %}
+    </tr>
+</table>
+
+</body>
+</html>

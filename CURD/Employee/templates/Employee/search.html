@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Searching.........</title>
+</head>
+<body>
+
+<form method="post" action="/Employee/search/">
+    {% csrf_token %}
+
+    <input type="text" placeholder="Search Here..........." name="srh">
+    <button type="submit">Search</button>
+</form>
+<br>
+<br>
+
+<div>
+    {% if messages %}
+    <ul>
+        {% for k in messages %}
+        <li>{{ k }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+
+<br>
+<br>
+
+<div>
+    {% if sr %}
+    {% for k in sr %}
+    <table border="0px">
+        <tr>
+            <th>ID</th>
+            <td>{{ k.eid }}</td>
+        </tr>
+
+
+        <tr>
+            <th>Name</th>
+            <td>{{ k.ename }}</td>
+        </tr>
+
+
+        <tr>
+            <th>Email</th>
+            <td>{{ k.eemail }}</td>
+        </tr>
+
+
+        <tr>
+            <th>Contact</th>
+            <td>{{ k.econtact }}</td>
+        </tr>
+
+        <br>
+        <br>
+
+    </table>
+    {% endfor %}
+    {% endif %}
+
+</div>
+</body>
+</html>

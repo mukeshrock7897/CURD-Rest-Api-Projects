@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ID</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ForignRelationShip/index1.css' %}">
+</head>
+<body>
+{% for e1 in employee.company_set.all %}
+    <h1>This Employee Information</h1>
+
+    <h4>Position</h4>-{{ e1.position }}<br>
+    <h4>Department</h4>-{{ e1.department }}<br>
+{% endfor %}
+</body>
+</html>

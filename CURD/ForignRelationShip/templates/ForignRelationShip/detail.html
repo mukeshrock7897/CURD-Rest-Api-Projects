@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details........</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ForignRelationShip/index.css' %}">
+</head>
+<body>
+
+{% for e in employee %}
+
+    <a href="/Relation/id/{{ e.id }}">{{ e.name }}</a>
+
+{% endfor %}
+
+</body>
+</html>
