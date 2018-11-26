@@ -1,0 +1,268 @@
+info:
+  description: ''
+  title: ''
+  version: ''
+openapi: 3.0.0
+paths:
+  /Class/employees{format}:
+    get:
+      operationId: Class_read
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Class
+    post:
+      operationId: Class_create
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Class
+  /Function/items{format}:
+    get:
+      operationId: Function_read
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Function
+    post:
+      operationId: Function_create
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Function
+  /Function/user{format}:
+    get:
+      operationId: Function_read_0
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Function
+    post:
+      operationId: Function_create_0
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Function
+  /Generic/employees{format}:
+    delete:
+      operationId: Generic_delete
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      - in: query
+        name: company
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      - in: query
+        name: city
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Generic
+    get:
+      operationId: Generic_read
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      - in: query
+        name: company
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      - in: query
+        name: city
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Generic
+    post:
+      operationId: Generic_create
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Generic
+    put:
+      operationId: Generic_update
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      - in: query
+        name: company
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      - in: query
+        name: city
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Generic
+  /Generic/login{format}:
+    post:
+      operationId: Generic_create_0
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Generic
+  /Generic/logout{format}:
+    post:
+      operationId: Generic_create_1
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Generic
+  /Generic/page{format}:
+    get:
+      operationId: Generic_read_0
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      tags:
+      - Generic
+  /Generic/user{format}:
+    get:
+      operationId: Generic_read_1
+      parameters:
+      - in: path
+        name: format
+        required: true
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      - in: query
+        name: is_active
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      - in: query
+        name: username
+        schema:
+          description: ''
+          title: !!python/tuple
+          - ''
+          type: string
+      - in: query
+        name: ordering
+        schema:
+          description: Which field to use when ordering the results.
+          title: !!python/tuple
+          - Ordering
+          type: string
+      - in: query
+        name: search
+        schema:
+          description: A search term.
+          title: !!python/tuple
+          - Search
+          type: string
+      tags:
+      - Generic
+servers:
+- url: ''
